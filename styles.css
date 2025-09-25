@@ -10,6 +10,15 @@
     box-sizing: border-box;
     font-family: 'VT323', sans-serif;
 }
+.btn-interactive {
+  transition: transform 0.2s;
+}
+.btn-interactive:hover {
+  transform: scale(1.1);
+}
+img {
+  -webkit-user-drag: none; /* Chrome/Edge */
+}
 .sound-btn {
   position: fixed;
   top: 30px;
@@ -29,14 +38,49 @@
     align-items: center;
     justify-content: center;
 }
+.main-menu {
+    position: relative;
+    border: 2px solid #333;
+    border-radius: 8px 8px 8px 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    height: 400px;
+}
+.navbar {
+    width:100%;
+    height: 100px;
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #333;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    gap: 30px;
+    padding-left: 25px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.icon-btn img {
+  width: 40px;
+  height: 40px;
+}
 .click-me-button{
-    padding: 10px 60px;
+    margin-top: 80px;
+    padding: 20px 80px;
     background: #fff;
     border: 2px solid black; /* border instead of outline */
     cursor: pointer;
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 30px;
+    font-size: 25px;
+    border-radius: 40px;
 }
 .popup{
     width: 350px;

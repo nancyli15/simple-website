@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <button class="sound-btn">
+  <button class="sound-btn btn-interactive">
     <img src="images/sound_icon.png"/>
   </button>
   
@@ -18,18 +18,39 @@
   <div class="container">
 
     <!-- Main Menu Section -->
-    <div class="main-menu">
-      <button type="submit" class="click-me-button" onclick="openPopup()">Click me!</button>
+    <div class="main-menu" id="main-menu">
+      <div class="navbar">
+        <button class="icon-btn btn-interactive" onclick="openAboutPopup()">
+          <img src="images/info_icon.png">
+        </button>
+        <button class="icon-btn btn-interactive" onclick="openCatPopup()">
+          <img src="images/cat_icon.png">
+        </button>
+      </div>
+      <button type="submit" class="click-me-button btn-interactive" onclick="openPopup()">Click me!</button>
     </div>
 
-    <!-- Quote Popup Box (initially hidden) -->
+    <!-- Quote Popup (initially hidden) -->
     <div class="popup" id="popup">
-      <img src="/images/stardew_apple_icon.jpg" alt="Popup Icon">
+      <img src="/images/stardew_apple_icon.jpg">
       <h2>Fun Quote!</h2>
       <p>insert inspirational quote from API</p>
       <button type="button" onclick="closePopup()">[x]</button>
     </div>  
 
+    <!-- About Me Popup -->
+     <div class="popup" id="about-popup">
+      <h2>About Me</h2>
+      <p>Hello! I'm Nancy. Something descriptive about me..</p>
+      <button type="button" onclick="closeAboutPopup()">[x]</button>
+    </div>  
+
+    <!-- Cat Image Popup -->
+     <div class="popup" id="cat-popup">
+      <h2>Cat</h2>
+      <img src="/images/stardew_cat_pic.jpg" alt="">
+      <button type="button" onclick="closeCatPopup()">[x]</button>
+    </div>  
   </div> 
   <script src="script.js"></script>
 </body>
