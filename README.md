@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> ade6540 (Resolved conflict by keeping GitHub version)
 =======
 # How to run the website
 
