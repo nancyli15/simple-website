@@ -13,5 +13,4 @@
 4. Open the frontend HTML file in your browser (double-click or open with Live Server)
 
 5. Happy exploring!
->>>>>>> 1eb96bf (Initial commit)
 
