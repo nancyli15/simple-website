@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 =======
 # How to run the website
 
