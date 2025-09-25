@@ -1,57 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a simple website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>a simple website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-  <button class="sound-btn" onclick="toggleSound()">
+<body>
+  <button class="sound-btn">
     <img src="images/sound_icon.png"/>
   </button>
   
+  <!-- Main Container that holds all main elements in center of page -->
   <div class="container">
+
+    <!-- Main Menu Section -->
     <div class="main-menu">
-        <button type="submit" class="click-me-button" onclick="openPopup()">click me!</button>
+      <button type="submit" class="click-me-button" onclick="openPopup()">Click me!</button>
     </div>
 
+    <!-- Quote Popup Box (initially hidden) -->
     <div class="popup" id="popup">
-        <img src="/images/stardew_apple_icon.jpg">
-        <h2>Fun Quote!</h2>
-        <p>insert inspirational quote from api</p>
-        <button type="button" onclick="closePopup()">[x]</button>
+      <img src="/images/stardew_apple_icon.jpg" alt="Popup Icon">
+      <h2>Fun Quote!</h2>
+      <p>insert inspirational quote from API</p>
+      <button type="button" onclick="closePopup()">[x]</button>
     </div>  
 
-  </div>
-
-<script>
-
-let popup = document.getElementById("popup")
-
-function openPopup() {
-  fetch('http://localhost:3000/api/funfact')  
-    .then(response => response.json())
-    .then(data => {
-      popup.querySelector('p').innerText = data.message;
-      popup.classList.add("open-popup");
-    })
-    .catch(() => {
-      popup.querySelector('p').innerText = "Error loading message.";
-      popup.classList.add("open-popup");
-    });
-}
-
-function closePopup(){
-    popup.classList.remove("open-popup");
-}
-
-function toggleSound(){
-    const sound = document.getElementById("/audio/button_click_sound.mp3").cloneNode();
-    sound.play();
-}
-</script>
+  </div> 
+  <script src="script.js"></script>
 </body>
 </html>
